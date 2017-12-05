@@ -12,9 +12,9 @@ Just launch `OpenTerminal.app`. When do so, a new `Terminal` window will be open
 
 We can also register this apps to `Finder`'s toolbar, then launch it from there. In this way, we can open a new `Terminal` window with the finder's path as current directory immediately.
 
-When you select a folder in a `Finder` window, you can open a new `Terminal` window and move the current directory to the selected folder's path by clicking this app's icon in the toolbar on the `Finder` window. Also you are able to selecting some of folders in a `Finder`window. In this time, each paths of folder's will be opend in separate windows.
+When you select a folder in a `Finder` window, you can open a new `Terminal` window and move the current directory to the selected folder's path by clicking this app's icon in the toolbar on the `Finder` window. Also you are able to selecting some of folders in a `Finder`window. In this time, each paths of folder's will be opend in separated `Terminal` windows.
 
-Alternatively, you click with no selection, a new `Terminal` window will be opened with the `Finder`'s path as current directory.
+Alternatively, you click with no selection, a new `Terminal` window will be opened with the path shown in `Finder` as current directory.
 
 ![Capture](Resources/capture.png)
 
