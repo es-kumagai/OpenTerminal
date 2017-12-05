@@ -18,21 +18,23 @@ let fileUrls: Array<String>
 
 if selectionItems.isEmpty {
 	
-	let finderWindow = finder.finderWindows!().firstObject as! FinderFinderWindowProtocol
-	let targetedContainer = finderWindow.target!
-	let targetItem = targetedContainer.get() as! FinderItemProtocol
+	// This case is for launch from Toolbar.
+	let window = finder.windows!().first as! FinderFinderWindowProtocol
+	let container = window.target!
+	let item = container.get() as! FinderItemProtocol
 
-	fileUrls = [targetItem.url!]
+	fileUrls = [item.url!]
 }
 else {
 	
+	// This case is for launch from Finder directly.
 	fileUrls = selectionItems
-		.flatMap { item in item as? FinderApplicationFileProtocol }
-		.flatMap { file in file.url }
+		.flatMap { $0 as? FinderApplicationFileProtocol }
+		.flatMap { $0.url }
 }
 
 fileUrls
-	.flatMap(URL.init(string:))
+	.flatMap { URL(string: $0) }
 	.forEach { url in
 
 	terminal.open!(with: [url.path])

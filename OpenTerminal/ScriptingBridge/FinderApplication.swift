@@ -14,7 +14,7 @@ import ScriptingBridge
 /// To use this instance, we have to declare the interface myself.
 @objc protocol FinderApplicationProtocol {
 	
-	@objc(FinderWindows) optional func finderWindows() -> SBElementArray
+	@objc(FinderWindows) optional func windows() -> SBElementArray
 
 	/// The selection in the frontmost Finder window.
 	@objc optional var selection: SBObject { get set }

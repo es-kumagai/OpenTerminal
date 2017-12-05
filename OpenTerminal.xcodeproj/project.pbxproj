@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B14779D81FD6C72C008A53C1 /* SBElementArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14779D71FD6C72C008A53C1 /* SBElementArray.swift */; };
 		B19FD9CD1FD5389100A0864A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19FD9CC1FD5389100A0864A /* Assets.xcassets */; };
 		B19FD9D61FD538B000A0864A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9A91FD51BE800A0864A /* main.swift */; };
 		B19FD9EB1FD5552800A0864A /* FinderApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9B21FD51E2F00A0864A /* FinderApplication.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B14779D71FD6C72C008A53C1 /* SBElementArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBElementArray.swift; sourceTree = "<group>"; };
 		B19FD9A91FD51BE800A0864A /* main.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B19FD9B11FD51BFE00A0864A /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		B19FD9B21FD51E2F00A0864A /* FinderApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderApplication.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				B19FD9FF1FD5A16400A0864A /* FinderFinderWindow.swift */,
 				B19FD9BE1FD52DFA00A0864A /* FinderItem.swift */,
 				B19FD9FD1FD5A14700A0864A /* FinderWindow.swift */,
+				B14779D71FD6C72C008A53C1 /* SBElementArray.swift */,
 				B19FD9C01FD5328C00A0864A /* TerminalApplication.swift */,
 			);
 			path = ScriptingBridge;
@@ -191,6 +194,7 @@
 				B19FD9F91FD581CA00A0864A /* FinderFile.swift in Sources */,
 				B19FDA001FD5A16400A0864A /* FinderFinderWindow.swift in Sources */,
 				B19FD9F51FD56C3700A0864A /* FinderApplicationFile.swift in Sources */,
+				B14779D81FD6C72C008A53C1 /* SBElementArray.swift in Sources */,
 				B19FD9EB1FD5552800A0864A /* FinderApplication.swift in Sources */,
 				B19FD9F11FD5552800A0864A /* TerminalApplication.swift in Sources */,
 				B19FD9D61FD538B000A0864A /* main.swift in Sources */,
