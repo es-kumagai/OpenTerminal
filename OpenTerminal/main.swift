@@ -9,33 +9,32 @@
 import ScriptingBridge
 
 let finder = SBApplication(bundleIdentifier: "com.apple.Finder")! as FinderApplicationProtocol
+let terminal = SBApplication(bundleIdentifier: "com.apple.Terminal")! as TerminalApplicationProtocol
+
 let selection = finder.selection!
 let selectionItems = selection.get() as! Array<AnyObject>
 
-let fileUrl: String
+let fileUrls: Array<String>
 
-switch selectionItems.first {
+if selectionItems.isEmpty {
 	
-// This case is for launch from Finder directly.
-case .some(let targetItem as FinderApplicationFileProtocol):
-	fileUrl = targetItem.url!
-
-case .some(_):
-	fatalError("Expect that target item is a FinderApplicationFile.")
-	
-// This case is for launch from Toolbar.
-case .none:
 	let finderWindow = finder.finderWindows!().firstObject as! FinderFinderWindowProtocol
 	let targetedContainer = finderWindow.target!
 	let targetItem = targetedContainer.get() as! FinderItemProtocol
+
+	fileUrls = [targetItem.url!]
+}
+else {
 	
-	fileUrl = targetItem.url!
+	fileUrls = selectionItems
+		.flatMap { item in item as? FinderApplicationFileProtocol }
+		.flatMap { file in file.url }
 }
 
-let url = URL(string: fileUrl)!
+fileUrls
+	.flatMap(URL.init(string:))
+	.forEach { url in
 
-let terminal = SBApplication(bundleIdentifier: "com.apple.Terminal")! as TerminalApplicationProtocol
-
-terminal.open!(with: [url.path])
-terminal.activate!()
-
+	terminal.open!(with: [url.path])
+	terminal.activate!()
+}
