@@ -36,6 +36,6 @@ let url = URL(string: fileUrl)!
 
 let terminal = SBApplication(bundleIdentifier: "com.apple.Terminal")! as TerminalApplicationProtocol
 
-terminal.activate!()
 terminal.open!(with: [url.path])
+terminal.activate!()
 
