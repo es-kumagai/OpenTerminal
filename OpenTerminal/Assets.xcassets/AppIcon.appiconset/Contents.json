@@ -3,25 +3,25 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "OpenTerminal-6.png",
+      "filename" : "OpenTerminal1-8.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "OpenTerminal-7.png",
+      "filename" : "OpenTerminal1-7.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "OpenTerminal-8.png",
+      "filename" : "OpenTerminal1-6.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "OpenTerminal-9.png",
+      "filename" : "OpenTerminal1-5.png",
       "scale" : "2x"
     },
     {
@@ -33,31 +33,31 @@
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "OpenTerminal-1.png",
+      "filename" : "OpenTerminal1-4.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "OpenTerminal-2.png",
+      "filename" : "OpenTerminal1-3.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "OpenTerminal-3.png",
+      "filename" : "OpenTerminal1-1.png",
       "scale" : "2x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "OpenTerminal-4.png",
+      "filename" : "OpenTerminal1.png",
       "scale" : "1x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "OpenTerminal-5.png",
+      "filename" : "OpenTerminal1-2.png",
       "scale" : "2x"
     }
   ],
