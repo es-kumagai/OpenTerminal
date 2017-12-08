@@ -18,6 +18,17 @@ Alternatively, you click with no selection, a new `Terminal` window will be open
 
 ![Capture](Resources/capture.png)
 
+## How to build
+
+To build this app, open `Terminal` and clone this repository. Then move this project directory and type `xcodebuild`. By doing this, this app will be created in `build/Release` directory.
+
+```bash
+git clone https://github.com/es-kumagai/OpenTerminal.git
+cd OpenTerminal
+
+xcodebuild
+```
+
 ## How to register to toolbar
 
 First, `OpenTerminal` app move to any folder (e.g. `/Application` or `~/Application`) then the app drag with `⌘`+`⌥` keys, and drop it to toolbar in a `Finder` window.
