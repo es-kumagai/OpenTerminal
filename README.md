@@ -1,5 +1,7 @@
 # OpenTerminal for macOS
 
+[![Build Status](https://travis-ci.org/es-kumagai/OpenTerminal.svg?branch=master)](https://travis-ci.org/es-kumagai/OpenTerminal)
+
 ![Icon](Resources/OpenTerminal.png)
 
 This is a app for opening a `Terminal` window from `Finder` window.
