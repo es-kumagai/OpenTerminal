@@ -29,12 +29,12 @@ else {
 	
 	// This case is for launch from Finder directly.
 	fileUrls = selectionItems
-		.flatMap { $0 as? FinderApplicationFileProtocol }
-		.flatMap { $0.url }
+		.compactMap { $0 as? FinderApplicationFileProtocol }
+		.compactMap { $0.url }
 }
 
 fileUrls
-	.flatMap { URL(string: $0) }
+	.compactMap { URL(string: $0) }
 	.forEach { url in
 
 	terminal.open!(with: [url.path])
