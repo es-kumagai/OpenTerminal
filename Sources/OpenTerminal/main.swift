@@ -9,7 +9,8 @@
 import ScriptingBridge
 
 let finder = SBApplication(bundleIdentifier: "com.apple.Finder")! as FinderApplicationProtocol
-let terminal = SBApplication(bundleIdentifier: "com.apple.Terminal")! as TerminalApplicationProtocol
+//let terminal = SBApplication(bundleIdentifier: "com.apple.Terminal")! as TerminalApplicationProtocol
+let terminal = SBApplication(bundleIdentifier: "com.googlecode.iterm2")! as ITermApplicationProtocol
 
 let selection = finder.selection!
 let selectionItems = selection.get() as! Array<AnyObject>
@@ -37,6 +38,10 @@ fileUrls
 	.compactMap { URL(string: $0) }
 	.forEach { url in
 
-	terminal.open!(with: [url.path])
-	terminal.activate!()
+		// I don't know how to change current path and keep opening the iTerm window.
+		let window = terminal.createWindow!(withDefaultProfileCommand: "")
+		window.writeContents!(of: URL(fileURLWithPath: "/tmp/a.txt"), text: "TEXT", newline: true)
+
+//	terminal.open!(with: [url.path])
+//	terminal.activate!()
 }
