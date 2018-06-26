@@ -31,8 +31,8 @@ else {
 	
 	// This case is for launch from Finder directly.
 	fileUrls = selectionItems
-		.compactMap { $0 as? FinderApplicationFileProtocol }
-		.compactMap { $0.url }
+		.flatMap { $0 as? FinderApplicationFileProtocol }
+		.flatMap { $0.url }
 }
 
 let toDir: (URL) -> (URL) = {
@@ -49,8 +49,8 @@ let toDir: (URL) -> (URL) = {
 }
 
 Set(fileUrls
-	.compactMap { URL(string: $0) }
-	.compactMap(toDir))
+	.flatMap { URL(string: $0) }
+	.flatMap(toDir))
 	.forEach { url in
 
 	terminal.open!(with: [url.path])
