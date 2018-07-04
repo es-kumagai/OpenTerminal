@@ -6,6 +6,7 @@
 //  Copyright © 2017 EasyStyle G.K. All rights reserved.
 //
 
+import AppKit
 import ScriptingBridge
 
 let finder = SBApplication(bundleIdentifier: "com.apple.Finder")! as FinderApplicationProtocol
@@ -16,6 +17,8 @@ let selection = finder.selection!
 let selectionItems = selection.get() as! Array<AnyObject>
 
 let fileUrls: Array<String>
+
+print(type(of: terminal))
 
 if selectionItems.isEmpty {
 	
@@ -41,6 +44,12 @@ fileUrls
 		// I don't know how to change current path and keep opening the iTerm window.
 		let window = terminal.createWindow!(withDefaultProfileCommand: "")
 		window.writeContents!(of: URL(fileURLWithPath: "/tmp/a.txt"), text: "TEXT", newline: true)
+		
+		let a = (terminal as! AnyObject).window!.firstResponder!
+//		let responder = (window as! AnyObject).window!.firstResponder!
+//		let event = NSEvent.keyEvent(with: .keyDown, location: .zero, modifierFlags: [], timestamp: Date().timeIntervalSinceReferenceDate, windowNumber: 0, context: nil, characters: "AAA", charactersIgnoringModifiers: "", isARepeat: false, keyCode: UInt16("A".cString(using: .ascii)![0]))!
+		
+//		responder.keyDown!(with: event)
 
 //	terminal.open!(with: [url.path])
 //	terminal.activate!()
