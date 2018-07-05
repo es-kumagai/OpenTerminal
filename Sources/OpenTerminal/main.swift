@@ -14,7 +14,7 @@ let finder = SBApplication(bundleIdentifier: "com.apple.Finder")! as FinderAppli
 let selection = finder.selection!
 let selectionItems = selection.get() as! Array<AnyObject>
 
-let fileUrls: Array<String>
+let filePaths: Array<String>
 
 if selectionItems.isEmpty {
 	
@@ -23,31 +23,33 @@ if selectionItems.isEmpty {
 	let container = window.target!
 	let item = container.get() as! FinderItemProtocol
 	
-	fileUrls = [item.url!]
+	filePaths = [item.url!]
 }
 else {
 	
 	// This case is for launch from Finder directly.
-	fileUrls = selectionItems
+	filePaths = selectionItems
 		.compactMap { $0 as? FinderApplicationFileProtocol }
 		.compactMap { $0.url }
 }
 
-fileUrls
-	.compactMap { URL(string: $0) }
+filePaths
+	.compactMap { URL.init(string: $0) }
+	.compactMap { $0.truncatedToDirectoryName }
+	.uniquelySet
 	.forEach { url in
+	
+	do {
 		
-		do {
-		
-			guard let terminal = settings.terminal else {
+		guard let terminal = settings.terminal else {
 			
-				throw OpenError.cannotSpecifyTargetTerminal
-			}
-			
-			try terminal.open(url: url)
+			throw OpenError.cannotSpecifyTargetTerminal
 		}
-		catch {
 		
-			alert(message: "\(error)")
-		}
+		try terminal.open(url: url)
+	}
+	catch {
+		
+		alert(message: "\(error)")
+	}
 }
