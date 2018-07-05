@@ -39,6 +39,7 @@
 		B108F89320EE3A390020BA08 /* iTerm2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTerm2.swift; sourceTree = "<group>"; };
 		B108F89520EE3BB00020BA08 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		B108F89720EE3F230020BA08 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		B108F89920EE40500020BA08 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B14779D71FD6C72C008A53C1 /* SBElementArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBElementArray.swift; sourceTree = "<group>"; };
 		B19FD9A91FD51BE800A0864A /* main.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B19FD9B11FD51BFE00A0864A /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
@@ -94,6 +95,7 @@
 		B19FD99D1FD51BE800A0864A = {
 			isa = PBXGroup;
 			children = (
+				B108F89920EE40500020BA08 /* README.md */,
 				B190DB071FDA885400F273D1 /* Sources */,
 				B19FD9FA1FD595D600A0864A /* Resources */,
 				B19FD9A71FD51BE800A0864A /* Products */,

@@ -16,13 +16,12 @@ final class ITerm2 : Terminal {
 		
 		tell application "iTerm2"
 		
-		create window with default profile
+			create window with default profile
 		
-		tell current session of current window
-		write text "cd \(url.pathForAppleScriptWithEscapedSpace)"
-		
-		end tell
-		
+			tell current session of current window
+				write text "cd \(url.pathForAppleScriptWithEscapedSpace)"
+			end tell
+
 		end tell
 		"""
 		
