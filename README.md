@@ -44,6 +44,8 @@ If you'd like to use `iTerm2` window instead of `Terminal` window, execute follo
 defaults write jp.ez-style.appid.OpenTerminal ESTargetTerminalBundleIdentifier "com.googlecode.iterm2"
 ```
 
+> In this time, Apple Script asks you to select `iTerm2` application. If asked, please select `iTerm2` application from displayed list.
+
 To use `Terminal` window, execute following command on Terminal,
 
 ```
