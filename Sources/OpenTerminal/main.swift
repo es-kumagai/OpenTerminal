@@ -11,6 +11,8 @@ import ScriptingBridge
 
 let finder = SBApplication(bundleIdentifier: "com.apple.Finder")! as FinderApplicationProtocol
 
+let manager = FileManager()
+
 let selection = finder.selection!
 let selectionItems = selection.get() as! Array<AnyObject>
 
@@ -29,12 +31,26 @@ else {
 	
 	// This case is for launch from Finder directly.
 	fileUrls = selectionItems
-		.compactMap { $0 as? FinderApplicationFileProtocol }
-		.compactMap { $0.url }
+		.flatMap { $0 as? FinderApplicationFileProtocol }
+		.flatMap { $0.url }
 }
 
-fileUrls
-	.compactMap { URL(string: $0) }
+let toDir: (URL) -> (URL) = {
+	url in
+	
+	var isDir:ObjCBool = false
+	manager.fileExists(atPath: url.path, isDirectory: &isDir)
+	
+	if isDir.boolValue {
+		return url
+	} else {
+		return url.deletingLastPathComponent()
+	}
+}
+
+Set(fileUrls
+	.flatMap { URL(string: $0) }
+	.flatMap(toDir))
 	.forEach { url in
 		
 		do {
