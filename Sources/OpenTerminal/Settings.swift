@@ -12,7 +12,7 @@ let settings = Settings()
 
 final class Settings {
 	
-	private let targetTerminalBundleIdentifierKey = "TargetTerminalBundleIdentifier"
+	private let targetTerminalBundleIdentifierKey = "ESTargetTerminalBundleIdentifier"
 	
 	enum TargetTerminalBundleIdentifier : String {
 		

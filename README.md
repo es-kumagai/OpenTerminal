@@ -5,6 +5,7 @@
 ![Icon](Resources/OpenTerminal.png)
 
 This is a app for opening a `Terminal` window from `Finder` window.
+You can use `iTerm2` window instead of `Terminal` window too.
 
 ## How to use
 
@@ -34,3 +35,17 @@ xcodebuild
 ## How to register to toolbar
 
 First, `OpenTerminal` app move to any folder (e.g. `/Application` or `~/Application`) then the app drag with `⌘`+`⌥` keys, and drop it to toolbar in a `Finder` window.
+
+## Change Target Terminal
+
+If you'd like to use `iTerm2` window instead of `Terminal` window, execute following command on Terminal,
+
+```
+defaults write jp.ez-style.appid.OpenTerminal ESTargetTerminalBundleIdentifier "com.googlecode.iterm2"
+```
+
+To use `Terminal` window, execute following command on Terminal,
+
+```
+defaults remove jp.ez-style.appid.OpenTerminal ESTargetTerminalBundleIdentifier
+```
