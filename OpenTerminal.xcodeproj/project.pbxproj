@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B108F88B20EE33F90020BA08 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B108F88A20EE33F90020BA08 /* URL.swift */; };
+		B108F88D20EE37240020BA08 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B108F88C20EE37240020BA08 /* Settings.swift */; };
+		B108F89020EE398C0020BA08 /* AppleTerminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B108F88F20EE398C0020BA08 /* AppleTerminal.swift */; };
+		B108F89220EE39990020BA08 /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B108F89120EE39990020BA08 /* Terminal.swift */; };
+		B108F89420EE3A390020BA08 /* iTerm2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B108F89320EE3A390020BA08 /* iTerm2.swift */; };
+		B108F89620EE3BB00020BA08 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B108F89520EE3BB00020BA08 /* Error.swift */; };
+		B108F89820EE3F230020BA08 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B108F89720EE3F230020BA08 /* Alert.swift */; };
 		B14779D81FD6C72C008A53C1 /* SBElementArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14779D71FD6C72C008A53C1 /* SBElementArray.swift */; };
 		B19FD9CD1FD5389100A0864A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19FD9CC1FD5389100A0864A /* Assets.xcassets */; };
 		B19FD9D61FD538B000A0864A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9A91FD51BE800A0864A /* main.swift */; };
@@ -27,6 +33,12 @@
 
 /* Begin PBXFileReference section */
 		B108F88A20EE33F90020BA08 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		B108F88C20EE37240020BA08 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		B108F88F20EE398C0020BA08 /* AppleTerminal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleTerminal.swift; sourceTree = "<group>"; };
+		B108F89120EE39990020BA08 /* Terminal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
+		B108F89320EE3A390020BA08 /* iTerm2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTerm2.swift; sourceTree = "<group>"; };
+		B108F89520EE3BB00020BA08 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		B108F89720EE3F230020BA08 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B14779D71FD6C72C008A53C1 /* SBElementArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBElementArray.swift; sourceTree = "<group>"; };
 		B19FD9A91FD51BE800A0864A /* main.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B19FD9B11FD51BFE00A0864A /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
@@ -61,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B108F88E20EE397E0020BA08 /* Terminals */ = {
+			isa = PBXGroup;
+			children = (
+				B108F88F20EE398C0020BA08 /* AppleTerminal.swift */,
+				B108F89320EE3A390020BA08 /* iTerm2.swift */,
+			);
+			path = Terminals;
+			sourceTree = "<group>";
+		};
 		B190DB071FDA885400F273D1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +114,12 @@
 			isa = PBXGroup;
 			children = (
 				B19FD9A91FD51BE800A0864A /* main.swift */,
+				B108F89720EE3F230020BA08 /* Alert.swift */,
 				B108F88A20EE33F90020BA08 /* URL.swift */,
+				B108F88C20EE37240020BA08 /* Settings.swift */,
+				B108F89120EE39990020BA08 /* Terminal.swift */,
+				B108F89520EE3BB00020BA08 /* Error.swift */,
+				B108F88E20EE397E0020BA08 /* Terminals */,
 				B19FD9CC1FD5389100A0864A /* Assets.xcassets */,
 				B19FD9D11FD5389100A0864A /* Info.plist */,
 				B19FD9D21FD5389100A0864A /* OpenTerminalApp.entitlements */,
@@ -231,12 +257,18 @@
 				B19FDA001FD5A16400A0864A /* FinderFinderWindow.swift in Sources */,
 				B1EF93C620DC1DB600E55FED /* ITermTab.swift in Sources */,
 				B1EF93C420DC1C5900E55FED /* ITermGenericMethods.swift in Sources */,
+				B108F89220EE39990020BA08 /* Terminal.swift in Sources */,
 				B19FD9F51FD56C3700A0864A /* FinderApplicationFile.swift in Sources */,
+				B108F88D20EE37240020BA08 /* Settings.swift in Sources */,
 				B14779D81FD6C72C008A53C1 /* SBElementArray.swift in Sources */,
 				B19FD9EB1FD5552800A0864A /* FinderApplication.swift in Sources */,
+				B108F89020EE398C0020BA08 /* AppleTerminal.swift in Sources */,
+				B108F89420EE3A390020BA08 /* iTerm2.swift in Sources */,
 				B1EF93C220DC1C3B00E55FED /* ITermWindow.swift in Sources */,
 				B19FD9F11FD5552800A0864A /* TerminalApplication.swift in Sources */,
 				B19FD9D61FD538B000A0864A /* main.swift in Sources */,
+				B108F89820EE3F230020BA08 /* Alert.swift in Sources */,
+				B108F89620EE3BB00020BA08 /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
