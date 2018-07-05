@@ -11,12 +11,10 @@ import ScriptingBridge
 
 let finder = SBApplication(bundleIdentifier: "com.apple.Finder")! as FinderApplicationProtocol
 
-let manager = FileManager()
-
 let selection = finder.selection!
 let selectionItems = selection.get() as! Array<AnyObject>
 
-let fileUrls: Array<String>
+let filePaths: Array<String>
 
 if selectionItems.isEmpty {
 	
@@ -25,45 +23,33 @@ if selectionItems.isEmpty {
 	let container = window.target!
 	let item = container.get() as! FinderItemProtocol
 	
-	fileUrls = [item.url!]
+	filePaths = [item.url!]
 }
 else {
 	
 	// This case is for launch from Finder directly.
-	fileUrls = selectionItems
-		.flatMap { $0 as? FinderApplicationFileProtocol }
-		.flatMap { $0.url }
+	filePaths = selectionItems
+		.compactMap { $0 as? FinderApplicationFileProtocol }
+		.compactMap { $0.url }
 }
 
-let toDir: (URL) -> (URL) = {
-	url in
-	
-	var isDir:ObjCBool = false
-	manager.fileExists(atPath: url.path, isDirectory: &isDir)
-	
-	if isDir.boolValue {
-		return url
-	} else {
-		return url.deletingLastPathComponent()
-	}
-}
-
-Set(fileUrls
-	.flatMap { URL(string: $0) }
-	.flatMap(toDir))
+filePaths
+	.compactMap { URL.init(string: $0) }
+	.compactMap { $0.truncatedToDirectoryName }
+	.uniquelySet
 	.forEach { url in
+	
+	do {
 		
-		do {
-		
-			guard let terminal = settings.terminal else {
+		guard let terminal = settings.terminal else {
 			
-				throw OpenError.cannotSpecifyTargetTerminal
-			}
-			
-			try terminal.open(url: url)
+			throw OpenError.cannotSpecifyTargetTerminal
 		}
-		catch {
 		
-			alert(message: "\(error)")
-		}
+		try terminal.open(url: url)
+	}
+	catch {
+		
+		alert(message: "\(error)")
+	}
 }
