@@ -42,10 +42,36 @@ fileUrls
 	.forEach { url in
 
 		// I don't know how to change current path and keep opening the iTerm window.
-		let window = terminal.createWindow!(withDefaultProfileCommand: "")
-		window.writeContents!(of: URL(fileURLWithPath: "/tmp/a.txt"), text: "TEXT", newline: true)
+//		let window = terminal.createWindow!(withDefaultProfileCommand: "")
+//		window.writeContents!(of: URL(fileURLWithPath: "/tmp/a.txt"), text: "TEXT", newline: true)
+
+		let source = """
+
+		tell application "iTerm2"
+
+			create window with default profile
+
+			tell current session of current window
+			write text "cd \(url.pathForAppleScriptWithEscapedSpace)"
 		
-		let a = (terminal as! AnyObject).window!.firstResponder!
+		end tell
+
+		end tell
+		"""
+		
+		let script = NSAppleScript(source: source)!
+		script.executeAndReturnError(nil)
+		
+		dump(NSWorkspace.shared.activeApplication())
+		let iterm = NSWorkspace.shared.frontmostApplication!
+		print(iterm.localizedName!)
+		print(iterm as? NSApplication)
+		let windowList = CGWindowListCopyWindowInfo([.optionOnScreenOnly, .excludeDesktopElements], kCGNullWindowID) as! NSArray
+		print("🌻", windowList.firstObject)
+
+//		print(iterm.perform(#selector(getter: windows)))
+		
+//		let a = (terminal as! AnyObject).window!.firstResponder!
 //		let responder = (window as! AnyObject).window!.firstResponder!
 //		let event = NSEvent.keyEvent(with: .keyDown, location: .zero, modifierFlags: [], timestamp: Date().timeIntervalSinceReferenceDate, windowNumber: 0, context: nil, characters: "AAA", charactersIgnoringModifiers: "", isARepeat: false, keyCode: UInt16("A".cString(using: .ascii)![0]))!
 		

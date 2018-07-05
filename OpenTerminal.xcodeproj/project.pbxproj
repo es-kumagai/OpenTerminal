@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B108F88B20EE33F90020BA08 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B108F88A20EE33F90020BA08 /* URL.swift */; };
 		B14779D81FD6C72C008A53C1 /* SBElementArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14779D71FD6C72C008A53C1 /* SBElementArray.swift */; };
 		B19FD9CD1FD5389100A0864A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19FD9CC1FD5389100A0864A /* Assets.xcassets */; };
 		B19FD9D61FD538B000A0864A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9A91FD51BE800A0864A /* main.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B108F88A20EE33F90020BA08 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		B14779D71FD6C72C008A53C1 /* SBElementArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBElementArray.swift; sourceTree = "<group>"; };
 		B19FD9A91FD51BE800A0864A /* main.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B19FD9B11FD51BFE00A0864A /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				B19FD9A91FD51BE800A0864A /* main.swift */,
+				B108F88A20EE33F90020BA08 /* URL.swift */,
 				B19FD9CC1FD5389100A0864A /* Assets.xcassets */,
 				B19FD9D11FD5389100A0864A /* Info.plist */,
 				B19FD9D21FD5389100A0864A /* OpenTerminalApp.entitlements */,
@@ -223,6 +226,7 @@
 				B19FD9EF1FD5552800A0864A /* FinderItem.swift in Sources */,
 				B1EF93C020DC16F800E55FED /* ITermApplication.swift in Sources */,
 				B19FD9FE1FD5A14700A0864A /* FinderWindow.swift in Sources */,
+				B108F88B20EE33F90020BA08 /* URL.swift in Sources */,
 				B19FD9F91FD581CA00A0864A /* FinderFile.swift in Sources */,
 				B19FDA001FD5A16400A0864A /* FinderFinderWindow.swift in Sources */,
 				B1EF93C620DC1DB600E55FED /* ITermTab.swift in Sources */,
