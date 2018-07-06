@@ -24,7 +24,6 @@
 		B19FD9F91FD581CA00A0864A /* FinderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9F81FD581CA00A0864A /* FinderFile.swift */; };
 		B19FD9FE1FD5A14700A0864A /* FinderWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9FD1FD5A14700A0864A /* FinderWindow.swift */; };
 		B19FDA001FD5A16400A0864A /* FinderFinderWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9FF1FD5A16400A0864A /* FinderFinderWindow.swift */; };
-		B19FDA031FD5BB9100A0864A /* OpenTerminal.svg in Resources */ = {isa = PBXBuildFile; fileRef = B19FDA021FD5BB9100A0864A /* OpenTerminal.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +36,7 @@
 		B108F89720EE3F230020BA08 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B108F89920EE40500020BA08 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B14779D71FD6C72C008A53C1 /* SBElementArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBElementArray.swift; sourceTree = "<group>"; };
+		B166685D20EF1A85007A0711 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		B19FD9A91FD51BE800A0864A /* main.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B19FD9B11FD51BFE00A0864A /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		B19FD9B21FD51E2F00A0864A /* FinderApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderApplication.swift; sourceTree = "<group>"; };
@@ -51,7 +51,6 @@
 		B19FD9F81FD581CA00A0864A /* FinderFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderFile.swift; sourceTree = "<group>"; };
 		B19FD9FD1FD5A14700A0864A /* FinderWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderWindow.swift; sourceTree = "<group>"; };
 		B19FD9FF1FD5A16400A0864A /* FinderFinderWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderFinderWindow.swift; sourceTree = "<group>"; };
-		B19FDA021FD5BB9100A0864A /* OpenTerminal.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = OpenTerminal.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +86,7 @@
 			children = (
 				B108F89920EE40500020BA08 /* README.md */,
 				B190DB071FDA885400F273D1 /* Sources */,
-				B19FD9FA1FD595D600A0864A /* Resources */,
+				B166685D20EF1A85007A0711 /* Resources */,
 				B19FD9A71FD51BE800A0864A /* Products */,
 				B19FD9B01FD51BFD00A0864A /* Frameworks */,
 			);
@@ -127,14 +126,6 @@
 				B19FD9B11FD51BFE00A0864A /* ScriptingBridge.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B19FD9FA1FD595D600A0864A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B19FDA021FD5BB9100A0864A /* OpenTerminal.svg */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		B19FD9FC1FD5A06300A0864A /* ScriptingBridge */ = {
@@ -217,7 +208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B19FDA031FD5BB9100A0864A /* OpenTerminal.svg in Resources */,
 				B19FD9CD1FD5389100A0864A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
