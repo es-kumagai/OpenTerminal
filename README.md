@@ -9,9 +9,9 @@ You can use `iTerm2` window instead of `Terminal` window too.
 
 ## How to use
 
-Just launch `OpenTerminal.app`. When do so, a new `Terminal` window will be opened and move the current directory to the app's bundle path.
+Just launch `OpenTerminal.app`. When do so, a new `Terminal` window will be opened and move the current directory to the app's bundle path. But usually, use this app in the following two ways.
 
-### Launch from toolbar
+### A) Launch from toolbar
 
 We can also register this app to `Finder`'s toolbar, then launch it from there. In this way, we can open a new `Terminal` window with the finder's path as current directory immediately.
 
@@ -21,7 +21,7 @@ Alternatively, you click with no selection, a new `Terminal` window will be open
 
 ![Capture](Resources/capture.png)
 
-### Launch from Dock
+### B) Launch from Dock
 
 There is also a way to launch this app from macOS Dock.
 
@@ -38,11 +38,15 @@ cd OpenTerminal
 xcodebuild
 ```
 
-## How to register to toolbar
+## Prepare for use
+
+There are two ways to use this app. 
+
+### A) Register to toolbar
 
 First, `OpenTerminal` app move to any folder (e.g. `/Application` or `~/Application`) then the app drag with `⌘`+`⌥` keys, and drop it to toolbar in a `Finder` window.
 
-## How to register to Dock
+### B) Register to Dock
 
 To drag this app and drop it to macOS Dock, the app will be registered to the Dock.
 
