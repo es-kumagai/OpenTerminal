@@ -24,6 +24,7 @@
 		B19FD9F91FD581CA00A0864A /* FinderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9F81FD581CA00A0864A /* FinderFile.swift */; };
 		B19FD9FE1FD5A14700A0864A /* FinderWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9FD1FD5A14700A0864A /* FinderWindow.swift */; };
 		B19FDA001FD5A16400A0864A /* FinderFinderWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9FF1FD5A16400A0864A /* FinderFinderWindow.swift */; };
+		B1FF6E1E210948E30056E3C0 /* AppleScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF6E1D210948E30056E3C0 /* AppleScript.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		B19FD9F81FD581CA00A0864A /* FinderFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderFile.swift; sourceTree = "<group>"; };
 		B19FD9FD1FD5A14700A0864A /* FinderWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderWindow.swift; sourceTree = "<group>"; };
 		B19FD9FF1FD5A16400A0864A /* FinderFinderWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderFinderWindow.swift; sourceTree = "<group>"; };
+		B1FF6E1D210948E30056E3C0 /* AppleScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScript.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				B108F88C20EE37240020BA08 /* Settings.swift */,
 				B108F89120EE39990020BA08 /* Terminal.swift */,
 				B108F89520EE3BB00020BA08 /* Error.swift */,
+				B1FF6E1D210948E30056E3C0 /* AppleScript.swift */,
 				B108F88E20EE397E0020BA08 /* Terminals */,
 				B19FD9CC1FD5389100A0864A /* Assets.xcassets */,
 				B19FD9D11FD5389100A0864A /* Info.plist */,
@@ -222,6 +225,7 @@
 				B19FD9EF1FD5552800A0864A /* FinderItem.swift in Sources */,
 				B19FD9FE1FD5A14700A0864A /* FinderWindow.swift in Sources */,
 				B108F88B20EE33F90020BA08 /* URL.swift in Sources */,
+				B1FF6E1E210948E30056E3C0 /* AppleScript.swift in Sources */,
 				B19FD9F91FD581CA00A0864A /* FinderFile.swift in Sources */,
 				B19FDA001FD5A16400A0864A /* FinderFinderWindow.swift in Sources */,
 				B108F89220EE39990020BA08 /* Terminal.swift in Sources */,

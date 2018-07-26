@@ -26,13 +26,14 @@ final class ITerm2 : Terminal {
 		"""
 		
 		let script = NSAppleScript(source: source)!
-		var errorInformation: NSDictionary?
 		
-		script.executeAndReturnError(&errorInformation)
-		
-		guard errorInformation == nil else {
+		do {
+
+			try script.execute()
+		}
+		catch {
 			
-			throw OpenError.failedToExecuteAppleScript(errorInfo: errorInformation!)
+			throw OpenError(appleScriptExecutionError: error)
 		}
 	}
 }

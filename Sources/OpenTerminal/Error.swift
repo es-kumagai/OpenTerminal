@@ -14,6 +14,24 @@ enum OpenError : Error {
 	case failedToExecuteAppleScript(errorInfo: NSDictionary)
 }
 
+extension OpenError {
+
+	init(appleScriptExecutionError error: Swift.Error) {
+		
+		guard let error = error as? NSAppleScript.Error else {
+			
+			self = .failedToExecuteAppleScript(errorInfo: [:])
+			return
+		}
+		
+		switch error {
+			
+		case .executionFailure(errorInfo: let errorInfo):
+			self = .failedToExecuteAppleScript(errorInfo: errorInfo)
+		}
+	}
+}
+
 extension OpenError : CustomStringConvertible {
 	
 	var description: String {
