@@ -9,9 +9,16 @@
 import AppKit
 
 func updateAppIcon() {
-	
-	let icon = NSImage(named: "EffectiveAppIcon")!
-	let path = Bundle.main.bundlePath
 
-	NSWorkspace.shared.setIcon(icon, forFile: path)
+	let buildVersion = AppInfo.buildVersion
+	
+	guard buildVersion != AppInfo.lastLaunchedBuildVersion else {
+		
+		return
+	}
+	
+	if NSWorkspace.shared.setIcon(AppInfo.effectiveAppIcon, forFile: AppInfo.bundlePath) {
+		
+		AppInfo.lastLaunchedBuildVersion = buildVersion
+	}
 }
