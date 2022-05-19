@@ -24,6 +24,7 @@
 		B19FD9F91FD581CA00A0864A /* FinderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9F81FD581CA00A0864A /* FinderFile.swift */; };
 		B19FD9FE1FD5A14700A0864A /* FinderWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9FD1FD5A14700A0864A /* FinderWindow.swift */; };
 		B19FDA001FD5A16400A0864A /* FinderFinderWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FD9FF1FD5A16400A0864A /* FinderFinderWindow.swift */; };
+		B1AED4B028369EA3004B2A19 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AED4AF28369C94004B2A19 /* Icon.swift */; };
 		B1FF6E1E210948E30056E3C0 /* AppleScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF6E1D210948E30056E3C0 /* AppleScript.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		B19FD9F81FD581CA00A0864A /* FinderFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderFile.swift; sourceTree = "<group>"; };
 		B19FD9FD1FD5A14700A0864A /* FinderWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderWindow.swift; sourceTree = "<group>"; };
 		B19FD9FF1FD5A16400A0864A /* FinderFinderWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderFinderWindow.swift; sourceTree = "<group>"; };
+		B1AED4AF28369C94004B2A19 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		B1FF6E1D210948E30056E3C0 /* AppleScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScript.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				B19FD9A91FD51BE800A0864A /* main.swift */,
+				B1AED4AF28369C94004B2A19 /* Icon.swift */,
 				B108F89720EE3F230020BA08 /* Alert.swift */,
 				B108F88A20EE33F90020BA08 /* URL.swift */,
 				B108F88C20EE37240020BA08 /* Settings.swift */,
@@ -173,12 +176,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "EasyStyle G.K.";
 				TargetAttributes = {
 					B19FD9C71FD5389100A0864A = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1330;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -234,6 +237,7 @@
 				B14779D81FD6C72C008A53C1 /* SBElementArray.swift in Sources */,
 				B19FD9EB1FD5552800A0864A /* FinderApplication.swift in Sources */,
 				B108F89020EE398C0020BA08 /* AppleTerminal.swift in Sources */,
+				B1AED4B028369EA3004B2A19 /* Icon.swift in Sources */,
 				B108F89420EE3A390020BA08 /* iTerm2.swift in Sources */,
 				B19FD9F11FD5552800A0864A /* TerminalApplication.swift in Sources */,
 				B19FD9D61FD538B000A0864A /* main.swift in Sources */,
@@ -270,6 +274,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -329,6 +334,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -360,7 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -371,7 +377,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -380,7 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
@@ -391,7 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ez-style.appid.OpenTerminal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

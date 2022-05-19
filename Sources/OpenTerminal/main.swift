@@ -16,6 +16,8 @@ let selectionItems = selection.get() as! Array<AnyObject>
 
 let filePaths: Array<String>
 
+updateAppIcon()
+
 if selectionItems.isEmpty {
 	
 	// This case is for launch from Toolbar.
